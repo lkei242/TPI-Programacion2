@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu 
@@ -59,8 +60,53 @@ public class Menu
 
     private void agregarVehiculoUsado() 
     {
-        Automovil auto = new Automovil("Ford", "Fiesta", 2015, "Rojo", "Hatchback", true);
-        conc.agregarVehiculo(auto);
+        //Por ahora esto es solo para autos usados
+
+        try {
+            System.out.print("Ingrese la marca del automóvil: ");
+            String marca = this.sc.nextLine();
+
+            System.out.print("Ingrese el modelo del automóvil: ");
+            String modelo = this.sc.nextLine();
+
+            int anio = 0;
+            boolean valido = false;
+
+            while (!valido) 
+            {
+                try {
+                    System.out.print("Ingrese el año del automóvil: ");
+                    anio = this.sc.nextInt();
+                    this.sc.nextLine();
+                    valido = true;
+                } 
+                catch (InputMismatchException e) 
+                {
+                    System.out.println("Error: debe ingresar un número entero.");
+                    this.sc.nextLine();
+                }
+            }
+
+            this.sc.nextLine(); 
+            System.out.print("Ingrese el color del automóvil: ");
+            String color = this.sc.nextLine();
+
+            System.out.print("Ingrese el tipo del automóvil (sedán, hatchback, etc.): ");
+            String tipo = this.sc.nextLine();
+
+            boolean usado = true; 
+
+            Automovil auto = new Automovil(marca, modelo, anio, color, tipo, usado);
+            this.conc.agregarVehiculo(auto);
+
+            System.out.println("Automóvil agregado correctamente.");
+
+        } 
+        //cambiar la excepcion generica por una mas especifica o una propia... o quizas no
+        catch (Exception e) 
+        {
+            System.out.println("Ocurrió un error al ingresar el automóvil: " + e.getMessage());
+        }
     }
 
     private void agregarVehiculoNuevo() 
