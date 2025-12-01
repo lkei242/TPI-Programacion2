@@ -5,6 +5,8 @@ public abstract class Vehiculo {
     private String color;
     private String carroceria; 
     private boolean esUsado;
+    private boolean mantenimientoRealizado;
+    private int kilometraje;
 
      //Accesores
     public String getMarca() {
@@ -43,16 +45,32 @@ public abstract class Vehiculo {
     public void setEsUsado(boolean esUsado) {
         this.esUsado = esUsado;
     }
+    public int getKilometraje() {
+        return kilometraje;
+    }
+    public void setKilometraje(int kilometraje) {
+        this.kilometraje = kilometraje;
+    }
+    public boolean getMantenimiento() {
+        return mantenimientoRealizado;
+    }
+    public void setMantenimiento(boolean realizado) {
+        this.mantenimientoRealizado = realizado;
+    }
 
-    //Constructor
-    public Vehiculo(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado) {
+     //Constructor
+    public Vehiculo(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado) {
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
         this.color = color;
         this.carroceria = carroceria;
         this.esUsado = esUsado;
+        this.kilometraje = kilometraje;
+        this.mantenimientoRealizado = mantenimientoRealizado;
     }
+
+ 
     //Metodos
     public abstract void mostrarInfo();
 }

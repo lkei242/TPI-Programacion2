@@ -12,8 +12,9 @@ public class Automovil extends Vehiculo implements Usado
     }
 
     //Constructor
-    public Automovil(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado) {
-        super(marca, modelo, anio, color, carroceria, esUsado);
+    public Automovil(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado)
+    {
+        super(marca, modelo, anio, color, carroceria, esUsado, kilometraje, mantenimientoRealizado);
     }
 
 

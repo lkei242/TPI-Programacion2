@@ -16,7 +16,8 @@ public class Concesionaria
     public void mostrarStock() 
     {
         System.out.println("\n========= STOCK DE VEHICULOS =========");
-        for (Vehiculo v : stock) {
+        for (Vehiculo v : stock) 
+            {
             v.mostrarInfo();
         }
     }

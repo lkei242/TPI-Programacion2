@@ -2,8 +2,9 @@ public class Motocicleta extends Vehiculo implements Usado {
 
     private boolean mantenimientoRealizado = false;
 
-    public Motocicleta(String marca, String modelo, int anio, String color, String tipo, boolean esUsado) {
-        super(marca, modelo, anio, color, tipo, esUsado);
+    public Motocicleta(String marca, String modelo, int anio, String color, String tipo, boolean esUsado, int kilometraje, boolean mantenimientoRealizado)
+    {
+        super(marca, modelo, anio, color, tipo, esUsado, kilometraje, mantenimientoRealizado);
     }
 
     public boolean getMantenimiento() {
