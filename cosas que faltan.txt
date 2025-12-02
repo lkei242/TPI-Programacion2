@@ -2,7 +2,6 @@ Puntos que faltan:
 
 para mi hay que acortar la clase menu haciendo otra clase u otras clases que sean submenu
 
-No arreglado (hacer)                - Todos los AUTOS (no motos ni camionetas creo) ingresan en cola de mantenimiento al cargarlos sin importar que sea nuevo
 No arreglado (hacer)                - Que se pueda cambiar el estado de mantenimiento y de lavado en los usados        
 No arreglado (hacer)                - Hacer que pregunte el kilometraje del vehiculo si es usado
 
@@ -19,6 +18,6 @@ No hecho (hacer)                -	Aplicación de Wrappers. (5 puntos)
 Listo (revisar y justificar)    -	Organización de los datos utilizando una Colección, elegida según criterios explicados en Clases. (10 puntos)
 Listo (revisar)                  -	Implementación de una “Cola o Lista de espera” (utilizando también una Colección) de vehículos usados, para ordenar su ingreso al “Taller de Revisión Mecánica”. (6 puntos)
 Listo (revisar)                  -	Implementación de al menos, una Clase Genérica. (8 puntos)
-No hecho (hacer)                -	Persistencia de datos, utilizando Archivos (libre criterio tecnológico) (8 puntos)
+Listo (revisar)                 -	Persistencia de datos, utilizando Archivos (libre criterio tecnológico) (8 puntos)
 Listo (revisar)                 -	ABMc (CRUD) de datos. (9 puntos)
 No hecho (hacer)                -	Uso de IA y Auditoría Crítica. (10 puntos)
