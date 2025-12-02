@@ -1,4 +1,6 @@
 puntos que faltan:
+No hecho (hacer)                - Hacer que pregunte el kilometraje del vehiculo si es usado
+
 Listo (revisar)                 -	Organización de código mediante concepto de “Diseño vs. Negocio” (4 puntos)
 No hecho (hacer)                -	Patrón de diseño JAVABean. (4 puntos)
 No hecho (lo hace Gero)         -	Representación global (somera) de la Arquitectura mediante “fundamentos de UML” convenidos durante Clases. (5 puntos)
