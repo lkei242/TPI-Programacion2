@@ -1,4 +1,7 @@
-puntos que faltan:
+Puntos que faltan:
+
+para mi hay que acortar la clase menu haciendo otra clase u otras clases que sean submenu
+
 No hecho (hacer)                - Hacer que pregunte el kilometraje del vehiculo si es usado
 
 Listo (revisar)                 -	Organización de código mediante concepto de “Diseño vs. Negocio” (4 puntos)
