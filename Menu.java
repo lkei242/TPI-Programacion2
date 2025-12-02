@@ -160,7 +160,7 @@ public class Menu
                 int anio = 0;
                 boolean valido = false;
 
-                while (!valido || (anio < 1900 || anio > 2026)) 
+                while (!valido || (anio < 1900 || anio > 2025)) 
                 {
                     try {
                         System.out.print("Ingrese el año del automovil: ");
@@ -245,19 +245,19 @@ public class Menu
         case 2:
             
             try {
-                System.out.print("Ingrese la marca del automovil: ");
+                System.out.print("Ingrese la marca de la camioneta: ");
                 String marca = this.sc.nextLine();
 
-                System.out.print("Ingrese el modelo del automovil: ");
+                System.out.print("Ingrese el modelo de la camioneta: ");
                 String modelo = this.sc.nextLine();
 
                 int anio = 0;
                 boolean valido = false;
 
-                while (!valido || (anio < 1900 || anio > 2026)) 
+                while (!valido || (anio < 1900 || anio > 2025)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año de la camioneta: ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -276,7 +276,7 @@ public class Menu
                 while (!valido  && kilometraje < 0) 
                 {
                     try {
-                        System.out.print("Ingrese el kilometraje del automovil: ");
+                        System.out.print("Ingrese el kilometraje de la camioneta: ");
                         kilometraje = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -302,7 +302,7 @@ public class Menu
                 {
                     try 
                     {
-                        System.out.print("Ingrese la identificacion del vehiculo: ");
+                        System.out.print("Ingrese la identificacion de la camioneta: ");
                         idVehiculo = this.sc.nextLine();
 
                         
@@ -316,7 +316,7 @@ public class Menu
                         }
 
                     }
-                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada
+                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada, pero quizas no porque es un string
                     catch (Exception e) 
                     {
                         System.out.println("El vehiculo ya existe: ");
@@ -326,31 +326,31 @@ public class Menu
                 Camioneta camioneta = new Camioneta(marca, modelo, anio, color, carroceria, usado, kilometraje, mantenimientoRealizado, idVehiculo, lavado);
                 this.conc.agregarVehiculo(camioneta);
 
-                System.out.println("Automovil agregado correctamente.");
+                System.out.println("Camioneta agregada correctamente.");
 
             } 
             //cambiar la excepcion generica por una mas especifica o una propia... o quizas no
             catch (Exception e) 
             {
-                System.out.println("Ocurrio un error al ingresar el automovil: " + e.getMessage());
+                System.out.println("Ocurrio un error al ingresar la camioneta: " + e.getMessage());
             }
             break;
         case 3:
             
             try {
-                System.out.print("Ingrese la marca del automovil: ");
+                System.out.print("Ingrese la marca de la motocicleta: ");
                 String marca = this.sc.nextLine();
 
-                System.out.print("Ingrese el modelo del automovil: ");
+                System.out.print("Ingrese el modelo de la motocicleta: ");
                 String modelo = this.sc.nextLine();
 
                 int anio = 0;
                 boolean valido = false;
 
-                while (!valido || (anio < 1900 || anio > 2026)) 
+                while (!valido || (anio < 1900 || anio > 2025)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año de la motocicleta: ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -369,7 +369,7 @@ public class Menu
                 while (!valido  && kilometraje < 0) 
                 {
                     try {
-                        System.out.print("Ingrese el kilometraje del automovil: ");
+                        System.out.print("Ingrese el kilometraje de la motocicleta: ");
                         kilometraje = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -396,7 +396,7 @@ public class Menu
                 {
                     try 
                     {
-                        System.out.print("Ingrese la identificacion del vehiculo: ");
+                        System.out.print("Ingrese la identificacion de la motocicleta: ");
                         idVehiculo = this.sc.nextLine();
 
                         
@@ -420,13 +420,13 @@ public class Menu
                 Motocicleta moto = new Motocicleta(marca, modelo, anio, color, chasis, usado, kilometraje, mantenimientoRealizado, idVehiculo, lavado);
                 this.conc.agregarVehiculo(moto);
 
-                System.out.println("Automovil agregado correctamente.");
+                System.out.println("Motocicleta agregada correctamente.");
 
             } 
             //cambiar la excepcion generica por una mas especifica o una propia... o quizas no
             catch (Exception e) 
             {
-                System.out.println("Ocurrio un error al ingresar el automovil: " + e.getMessage());
+                System.out.println("Ocurrio un error al ingresar la motocicleta: " + e.getMessage());
             }
             break;
 
@@ -486,7 +486,7 @@ public class Menu
                 int anio = 0;
                 boolean valido = false;
 
-                while (!valido || (anio < 1900 || anio > 2026)) 
+                while (!valido || (anio < 1900 || anio > 2025)) 
                 {
                     try {
                         System.out.print("Ingrese el año del automovil: ");
@@ -556,19 +556,19 @@ public class Menu
         case 2:
             
             try {
-                System.out.print("Ingrese la marca del automovil: ");
+                System.out.print("Ingrese la marca de la camioneta: ");
                 String marca = this.sc.nextLine();
 
-                System.out.print("Ingrese el modelo del automovil: ");
+                System.out.print("Ingrese el modelo de la camioneta: ");
                 String modelo = this.sc.nextLine();
 
                 int anio = 0;
                 boolean valido = false;
 
-                while (!valido || (anio < 1900 || anio > 2026)) 
+                while (!valido || (anio < 1900 || anio > 2025)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año de la camioneta: ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -598,7 +598,7 @@ public class Menu
                 {
                     try 
                     {
-                        System.out.print("Ingrese la identificacion del vehiculo: ");
+                        System.out.print("Ingrese la identificacion de la camioneta: ");
                         idVehiculo = this.sc.nextLine();
 
                         
@@ -622,31 +622,31 @@ public class Menu
                 Camioneta camioneta = new Camioneta(marca, modelo, anio, color, carroceria, usado, kilometraje, mantenimientoRealizado, idVehiculo, lavado);
                 this.conc.agregarVehiculo(camioneta);
 
-                System.out.println("Automovil agregado correctamente.");
+                System.out.println("Camioneta agregada correctamente.");
 
             } 
             //cambiar la excepcion generica por una mas especifica o una propia... o quizas no
             catch (Exception e) 
             {
-                System.out.println("Ocurrio un error al ingresar el automovil: " + e.getMessage());
+                System.out.println("Ocurrio un error al ingresar la camioneta: " + e.getMessage());
             }
             break;
         case 3:
             
             try {
-                System.out.print("Ingrese la marca del automovil: ");
+                System.out.print("Ingrese la marca de la motocicleta: ");
                 String marca = this.sc.nextLine();
 
-                System.out.print("Ingrese el modelo del automovil: ");
+                System.out.print("Ingrese el modelo de la motocicleta: ");
                 String modelo = this.sc.nextLine();
 
                 int anio = 0;
                 boolean valido = false;
 
-                while (!valido || (anio < 1900 || anio > 2026)) 
+                while (!valido || (anio < 1900 || anio > 2025)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año de la motocicleta: ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -667,14 +667,14 @@ public class Menu
                 boolean usado = false; 
                 boolean mantenimientoRealizado = false;
                 //falta controlar que el idVehiculo sea unico
-boolean esUnico = false;
+                boolean esUnico = false;
                 String idVehiculo = null;
 
                 while (!esUnico) 
                 {
                     try 
                     {
-                        System.out.print("Ingrese la identificacion del vehiculo: ");
+                        System.out.print("Ingrese la identificacion de la motocicleta: ");
                         idVehiculo = this.sc.nextLine();
 
                         
@@ -700,13 +700,13 @@ boolean esUnico = false;
                 this.conc.agregarVehiculo(moto);
                 
 
-                System.out.println("Automovil agregado correctamente.");
+                System.out.println("Motocicleta agregada correctamente.");
 
             } 
             //cambiar la excepcion generica por una mas especifica o una propia... o quizas no
             catch (Exception e) 
             {
-                System.out.println("Ocurrio un error al ingresar el automovil: " + e.getMessage());
+                System.out.println("Ocurrio un error al ingresar la motocicleta: " + e.getMessage());
             }
             break;
 
