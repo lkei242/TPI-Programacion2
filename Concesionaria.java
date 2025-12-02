@@ -119,6 +119,7 @@ public class Concesionaria
             v.mostrarInfo();
             
         }
+        //poner el isEmpty en otro metodo para controlar que está vacio en Menu
         if (this.cola_mantenimiento.isEmpty()) 
         {
             System.out.println();

@@ -14,6 +14,7 @@ public class Menu
         do 
         {
             //falta opcion de poner vehiculo en cola de mantenimiento y despues realizar mantenimiento de todos los vehiculos en cola
+            //Para eliminar, modificar y realizar mantenimiento hay que poner un control de que existan vehículos en el stock
             System.out.println("╔═════════════ MENU ════════════╗");
             System.out.println("║1. Agregar vehiculo usado      ║");
             System.out.println("║2. Agregar vehiculo nuevo      ║");
@@ -163,7 +164,7 @@ public class Menu
                 while (!valido || (anio < 1900 || anio > 2026)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año del automovil(1900-2026): ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -223,7 +224,7 @@ public class Menu
                         }
 
                     }
-                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada
+                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada... creo que no hace falta este try catch
                     catch (Exception e) 
                     {
                         System.out.println("El vehiculo ya existe: ");
@@ -257,7 +258,7 @@ public class Menu
                 while (!valido || (anio < 1900 || anio > 2026)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año del automovil(1900-2026): ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -316,7 +317,7 @@ public class Menu
                         }
 
                     }
-                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada
+                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada... creo que no hace falta este try catch
                     catch (Exception e) 
                     {
                         System.out.println("El vehiculo ya existe: ");
@@ -350,7 +351,7 @@ public class Menu
                 while (!valido || (anio < 1900 || anio > 2026)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año del automovil(1900-2026): ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -410,7 +411,7 @@ public class Menu
                         }
 
                     }
-                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada
+                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada... creo que no hace falta este try catch
                     catch (Exception e) 
                     {
                         System.out.println("El vehiculo ya existe: ");
@@ -489,7 +490,7 @@ public class Menu
                 while (!valido || (anio < 1900 || anio > 2026)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año del automovil(1900-2026): ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -534,7 +535,7 @@ public class Menu
                         }
 
                     }
-                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada
+                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada... creo que no hace falta este try catch
                     catch (Exception e) 
                     {
                         System.out.println("El vehiculo ya existe: ");
@@ -568,7 +569,7 @@ public class Menu
                 while (!valido || (anio < 1900 || anio > 2026)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año del automovil(1900-2026): ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -612,7 +613,7 @@ public class Menu
                         }
 
                     }
-                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada
+                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada... creo que no hace falta este try catch
                     catch (Exception e) 
                     {
                         System.out.println("El vehiculo ya existe: ");
@@ -646,7 +647,7 @@ public class Menu
                 while (!valido || (anio < 1900 || anio > 2026)) 
                 {
                     try {
-                        System.out.print("Ingrese el año del automovil: ");
+                        System.out.print("Ingrese el año del automovil(1900-2026): ");
                         anio = this.sc.nextInt();
                         this.sc.nextLine();
                         valido = true;
@@ -688,7 +689,7 @@ boolean esUnico = false;
                         }
 
                     }
-                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada
+                    //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada... creo que no hace falta este try catch
                     catch (Exception e) 
                     {
                         System.out.println("El vehiculo ya existe: ");
@@ -870,7 +871,252 @@ boolean esUnico = false;
 
     }
 
-    
+    public void modificarAutomovil()
+{
+    // Usamos el Scanner 'sc' y la Concesionaria 'conc' definidos en Menu [5].
+
+    System.out.println("===========================================");
+    System.out.println(" MODIFICAR AUTOMOVIL POR ID");
+    System.out.println("===========================================");
+
+    System.out.print("Ingrese la identificacion del vehiculo (ID) a modificar: ");
+    boolean existe = false;
+    String idVehiculo = null;
+
+    while (!existe) 
+    {
+        try 
+        {
+            System.out.print("Ingrese la identificacion del vehiculo: ");
+            idVehiculo = this.sc.nextLine();
+
+            
+            if (this.conc.vehiculoUnico(idVehiculo)==true) 
+            {
+                existe = true;
+            } 
+            else 
+            {
+                System.out.println("El ID ingresado no existe. Intente nuevamente.");
+            }
+
+        }
+        //Aca estoy un 100% seguro que puedo hacer una excepcion personalizada... creo que no hace falta este try catch
+        catch (Exception e) 
+        {
+            System.out.println("El vehiculo no existe: ");
+        }
+    }
+
+    // Buscar el vehiculo por ID usando el método de Concesionaria [1]
+    int indice = this.conc.buscarVehiculo(idVehiculo);
+
+    if (indice != -1)
+    {
+        // Obtener el objeto Vehiculo del stock [6, 7]
+        Vehiculo vehiculo = this.conc.getStock().get(indice);
+
+
+        // Verificar que sea un Automovil (aunque los setters son de Vehiculo, 
+        // la solicitud es específica para autos)
+        //aca tengo que cambiar para que sea para moto y camioneta tambien
+
+            System.out.println("\n=== Vehiculo Encontrado (ID: " + vehiculo.getIdVehiculo() + ") ===");
+            // Mostrar información actual (Basado en mostrarInfo [8, 9])
+            System.out.println("Marca actual: " + vehiculo.getMarca()); // [2, 9]
+            System.out.println("\n===========================================\n");
+            
+            System.out.println("\nSeleccione el atributo a modificar:");
+            System.out.println(" 1. Marca");
+            System.out.println(" 2. Modelo");
+            System.out.println(" 3. Año");
+            System.out.println(" 4. Color");
+            System.out.println(" 5. Carroceria");
+            System.out.println(" 6. Es Usado");
+            System.out.println(" 7. Mantenimiento");
+            System.out.println(" 8. Kilometraje");
+            System.out.println(" 9. Lavado");
+            System.out.println(" 10. Salir");
+            
+            
+
+            int opcion = 0;
+            boolean valido = false;
+
+            
+            while (!valido)
+            {
+                try
+                {
+                    System.out.print("Opcion: ");
+                    opcion = this.sc.nextInt();
+                    this.sc.nextLine();
+
+                    if (opcion >= 1 && opcion <= 10)
+                    {
+                        valido = true;
+                    }
+                    else
+                    {
+                        System.out.println("Opcion invalida.");
+                    }
+                }
+                catch (InputMismatchException e)
+                {
+                    System.out.println("Debe ingresar un numero.");
+                    this.sc.nextLine();
+                }
+            }
+            valido = false;
+            while (!valido)
+            {
+                switch (opcion)
+                {
+                    case 1:
+                        System.out.print("Ingrese la nueva marca: ");
+                        String nuevaMarca = this.sc.nextLine();
+                        vehiculo.setMarca(nuevaMarca);
+                        System.out.println("Marca modificada a: " + vehiculo.getMarca());
+                        break;
+                    case 2:
+                        System.out.print("Ingrese el nuevo modelo: ");
+                        String nuevoModelo = this.sc.nextLine();
+                        vehiculo.setModelo(nuevoModelo);
+                        System.out.println("Modelo modificado a: " + vehiculo.getModelo());
+                        break;
+                    case 3:
+                        int nuevoAnio = 0;
+                        boolean anioValido = false;
+                        
+                        while (!anioValido || (nuevoAnio < 1900 || nuevoAnio > 2026))
+                        {
+                            try {
+                                System.out.print("Ingrese el nuevo año del automovil (1900-2026): ");
+                                nuevoAnio = this.sc.nextInt();
+                                this.sc.nextLine();
+                                anioValido = true;
+                            }
+                            catch (InputMismatchException e)
+                            {
+                                System.out.println("Error: debe ingresar un numero entero.");
+                                this.sc.nextLine();
+                                anioValido = false;
+                            }
+                        }
+                        vehiculo.setAnio(nuevoAnio);
+                        System.out.println("Año modificado a: " + vehiculo.getAnio());
+                        break;
+                    case 4:
+                        System.out.println("Seleccione un nuevo color:");
+                        SeleccionColorAuto.mostrarColoresDisponibles();
+                        
+                        int colorAuto = -1;
+                        boolean colorValido = false;
+                        
+                        while (!colorValido)
+                        {
+                            try {
+                                System.out.print("Ingrese un numero del 1 al 6: ");
+                                colorAuto = Integer.parseInt(this.sc.nextLine());
+                                if (colorAuto >= 1 && colorAuto <= 6)
+                                {
+                                    colorValido = true;
+                                }
+                                else
+                                {
+                                    System.out.println("Numero fuera de rango. Intente de nuevo."); // Mensaje similar a [14]
+                                }
+                            } catch (NumberFormatException e) {
+                                System.out.println("Entrada invalida. Debe ser un numero entero."); // Mensaje similar a [16]
+                            }
+                        }
+                        SeleccionColorAuto.ColorAuto colorEnum = SeleccionColorAuto.obtenerColorPorIndice(colorAuto); // [15]
+                        String nuevoColor = colorEnum.toString();
+                        vehiculo.setColor(nuevoColor); // Usando setter de Vehiculo [3]
+                        System.out.println("Color modificado a: " + vehiculo.getColor());
+                        break;
+                    case 5: // Modificar Carroceria
+                        if (vehiculo instanceof Automovil)
+                        {
+                            System.out.println("\n=== Automovil Encontrado (ID: " + vehiculo.getIdVehiculo() + ") ===");
+                            existe = true;
+                        }
+                        else if (vehiculo instanceof Motocicleta)
+                        {
+                            System.out.println("\n=== Motocicleta Encontrada (ID: " + vehiculo.getIdVehiculo() + ") ===");
+                            existe = true;
+                        }
+                        else if (vehiculo instanceof Camioneta)
+                        {
+                            System.out.println("\n=== Camioneta Encontrada (ID: " + vehiculo.getIdVehiculo() + ") ===");
+                            existe = true;
+                        }
+                        System.out.print("Ingrese la carroceria: ");
+                        String nuevaCarroceria = this.sc.nextLine();
+                        vehiculo.setCarroceria(nuevaCarroceria);
+                        System.out.println("Carrocería modificada a: " + vehiculo.getCarroceria());
+                        break;
+                    case 6: // Modificar Uso
+                        System.out.print("Ingrese si es usado: usado (true) o no usado (false):");
+                        //aca poner un try catch, o quizas cambiar a un int
+                        boolean usado = Boolean.parseBoolean(this.sc.nextLine());
+                        vehiculo.setEsUsado(usado);
+                        System.out.println("Uso modificado a: " + vehiculo.getEsUsado());
+                        break;
+                    case 7: // Modificar Mantenimiento
+                        System.out.print("Ingrese si es usado: usado (true) o no usado (false):");
+                        //aca poner un try catch, o quizas cambiar a un int
+                        boolean mantenimiento = Boolean.parseBoolean(this.sc.nextLine());
+                        vehiculo.setMantenimiento(mantenimiento);
+                        System.out.println("Mantenimiento modificado a: " + vehiculo.getMantenimiento());
+                        break;
+                    case 8: // Modificar Kilometraje
+                        int nuevoKilometraje = -1;
+                        boolean kmValido = false;
+                        // Lógica de validación de kilometraje similar a agregarVehiculoUsado [13, 17]
+                        while (!kmValido || nuevoKilometraje < 0)
+                        {
+                            try 
+                            {
+                                System.out.print("Ingrese el nuevo kilometraje del automovil: ");
+                                nuevoKilometraje = this.sc.nextInt();
+                                this.sc.nextLine();
+                                if (nuevoKilometraje >= 0) {
+                                    kmValido = true;
+                                }
+                            }
+                            catch (InputMismatchException e)
+                            {
+                                System.out.println("Error: debe ingresar un numero entero."); // Mensaje similar a [17]
+                                this.sc.nextLine();
+                            }
+                        }
+                        vehiculo.setKilometraje(nuevoKilometraje); // Usando setter de Vehiculo [4]
+                        System.out.println("Kilometraje modificado a: " + vehiculo.getKilometraje());
+                        break;
+                    case 9: // Modificar Uso
+                        System.out.print("Ingrese si es usado: usado (true) o no usado (false):");
+                        //aca poner un try catch, o quizas cambiar a un int
+                        boolean lavado = Boolean.parseBoolean(this.sc.nextLine());
+                        vehiculo.setEsUsado(lavado);
+                        System.out.println("Uso modificado a: " + vehiculo.getLavado());
+                        break;
+                    case 10: // Modificar Uso
+                        System.out.print("Saliendo...");
+                        valido = true;
+                        break;
+                    default:
+                        System.out.println("Modificacion cancelada o invalida.");
+                }
+            }
+       
+        
+    }
+    else
+    {
+        System.out.println("Vehiculo no encontrado. Ingrese un ID valido."); // Mensaje similar a [18, 19]
+    }
+}
     
 }
 
