@@ -1,4 +1,6 @@
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Usado
+{
+    private String idVehiculo;
     private String marca;
     private String modelo;
     private int anio;
@@ -7,6 +9,8 @@ public abstract class Vehiculo {
     private boolean esUsado;
     private boolean mantenimientoRealizado;
     private int kilometraje;
+    private boolean lavado;
+    
 
      //Accesores
     public String getMarca() {
@@ -57,9 +61,24 @@ public abstract class Vehiculo {
     public void setMantenimiento(boolean realizado) {
         this.mantenimientoRealizado = realizado;
     }
+    public String getIdVehiculo() {
+        return idVehiculo;
+    }
+    public void setIdVehiculo(String idVehiculo) {
+        this.idVehiculo = idVehiculo;
+    }
+    public boolean getLavado()
+    {
+        return this.lavado;
+    }
+    public void setLavado(boolean lavado)
+    {
+        this.lavado = lavado;
+    }
 
      //Constructor
-    public Vehiculo(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado) {
+    public Vehiculo(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado, String idVehiculo, boolean lavado) 
+    {
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
@@ -68,9 +87,11 @@ public abstract class Vehiculo {
         this.esUsado = esUsado;
         this.kilometraje = kilometraje;
         this.mantenimientoRealizado = mantenimientoRealizado;
+        this.idVehiculo = idVehiculo;
+        this.lavado = lavado;
     }
 
  
     //Metodos
-    public abstract void mostrarInfo();
+    public abstract void mostrarInfo(); //Cambiarlo a un toString() 
 }

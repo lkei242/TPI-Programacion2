@@ -1,35 +1,25 @@
-public class Motocicleta extends Vehiculo implements Usado {
+public class Motocicleta extends Vehiculo
+{
 
-    private boolean mantenimientoRealizado = false;
 
-    public Motocicleta(String marca, String modelo, int anio, String color, String tipo, boolean esUsado, int kilometraje, boolean mantenimientoRealizado)
+
+    public Motocicleta(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado, String idVehiculo, boolean lavado)
     {
-        super(marca, modelo, anio, color, tipo, esUsado, kilometraje, mantenimientoRealizado);
-    }
-
-    public boolean getMantenimiento() {
-        return mantenimientoRealizado;
-    }
-
-    public void setMantenimiento(boolean realizado) {
-        this.mantenimientoRealizado = realizado;
+        super(marca, modelo, anio, color, carroceria, esUsado, kilometraje, mantenimientoRealizado, idVehiculo, lavado);
     }
 
     public void mostrarInfo() {
         System.out.println("=== Motocicleta ===");
+        System.out.println("idVehiculo: " + super.getIdVehiculo());
         System.out.println("Marca: " + super.getMarca());
         System.out.println("Modelo: " + super.getModelo());
         System.out.println("Anio: " + super.getAnio());
         System.out.println("Color: " + super.getColor());
-        System.out.println("Tipo: " + super.getCarroceria());
-        if (super.getEsUsado()) 
-        {
-            System.out.println("Usada - Mantenimiento: " + (mantenimientoRealizado ? "OK" : "Pendiente"));
-        } 
-        else 
-        {
-            System.out.println("Nueva 0 KM");
-        }
+        System.out.println("Carroceria: " + super.getCarroceria());
+        System.out.println("Kilometraje: " + super.getKilometraje());
+        System.out.println("Mantenimiento: " + (super.getMantenimiento() ? "Ha sido mantenido" : "Pendiente"));
+        System.out.println("Usado: " + (super.getEsUsado() ? "Si" : "No"));
+        System.out.println("Lavado: " + (super.getLavado() ? "Si" : "No"));
 
         System.out.println("-------------------------");
     }

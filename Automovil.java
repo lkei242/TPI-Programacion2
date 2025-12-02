@@ -1,40 +1,29 @@
-public class Automovil extends Vehiculo implements Usado 
+public class Automovil extends Vehiculo 
 {
 
-    private boolean mantenimientoRealizado = false;
 
-    //Accesores
-    public boolean getMantenimiento() {
-        return mantenimientoRealizado;
-    }
-    public void setMantenimiento(boolean realizado) {
-        this.mantenimientoRealizado = realizado;
-    }
 
     //Constructor
-    public Automovil(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado)
+    public Automovil(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado, String idVehiculo, boolean lavado)
     {
-        super(marca, modelo, anio, color, carroceria, esUsado, kilometraje, mantenimientoRealizado);
+        super(marca, modelo, anio, color, carroceria, esUsado, kilometraje, mantenimientoRealizado, idVehiculo, lavado);
     }
 
 
     public void mostrarInfo() 
     {
+        //hacer lo mismo para moto y camioneta
         System.out.println("=== Automovil ===");
+        System.out.println("idVehiculo: " + super.getIdVehiculo());
         System.out.println("Marca: " + super.getMarca());
         System.out.println("Modelo: " + super.getModelo());
         System.out.println("Anio: " + super.getAnio());
         System.out.println("Color: " + super.getColor());
         System.out.println("Carroceria: " + super.getCarroceria());
-
-        if (super.getEsUsado()) 
-        {
-            System.out.println("Usado - Mantenimiento: " + (mantenimientoRealizado ? "OK" : "Pendiente"));
-        } 
-        else 
-        {
-            System.out.println("Nuevo 0 KM");
-        }
+        System.out.println("Kilometraje: " + super.getKilometraje());
+        System.out.println("Mantenimiento: " + (super.getMantenimiento() ? "Ha sido mantenido" : "Pendiente"));
+        System.out.println("Usado: " + (super.getEsUsado() ? "Si" : "No"));
+        System.out.println("Lavado: " + (super.getLavado() ? "Si" : "No"));
 
         System.out.println("-------------------------");
     }

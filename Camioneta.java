@@ -1,29 +1,18 @@
-public class Camioneta extends Vehiculo implements Usado 
+public class Camioneta extends Vehiculo
 {
 
-    private boolean mantenimientoRealizado = false;
-
-    //Accesores
-    public boolean getMantenimiento()
-    {
-        return mantenimientoRealizado;
-    }
-
-    public void setMantenimiento(boolean realizado) 
-    {
-        this.mantenimientoRealizado = realizado;
-    }
 
     //Constructor
-    public Camioneta(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje,  boolean mantenimientoRealizado)
+    public Camioneta(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado, String idVehiculo, boolean lavado)
     {
-        super(marca, modelo, anio, color, carroceria, esUsado, kilometraje, mantenimientoRealizado);
+        super(marca, modelo, anio, color, carroceria, esUsado, kilometraje, mantenimientoRealizado, idVehiculo, lavado);
     }
     
     //Metodos
     public void mostrarInfo() 
     {
         System.out.println("=== Camioneta ===");
+        System.out.println("idVehiculo: " + super.getIdVehiculo());
         System.out.println("Marca: " + super.getMarca());
         System.out.println("Modelo: " + super.getModelo());
         System.out.println("Anio: " + super.getAnio());
@@ -31,11 +20,8 @@ public class Camioneta extends Vehiculo implements Usado
         System.out.println("Carroceria: " + super.getCarroceria());
         System.out.println("Kilometraje: " + super.getKilometraje());
         System.out.println("Mantenimiento: " + (super.getMantenimiento() ? "Ha sido mantenido" : "Pendiente"));
-
-        if (super.getEsUsado()) 
-        {
-            System.out.println("Usada - Mantenimiento: " + (mantenimientoRealizado ? "Ha sido mantenido" : "Pendiente"));
-        } 
+        System.out.println("Usado: " + (super.getEsUsado() ? "Si" : "No"));
+        System.out.println("Lavado: " + (super.getLavado() ? "Si" : "No"));
 
 
         System.out.println("-------------------------");
