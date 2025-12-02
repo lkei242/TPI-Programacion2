@@ -2,7 +2,7 @@ Puntos que faltan:
 
 para mi hay que acortar la clase menu haciendo otra clase u otras clases que sean submenu
 
-No arreglado (hacer)                - Todos los autos ingresan en cola de mantenimiento al cargarlos sin importar que sea nuevo
+No arreglado (hacer)                - Todos los AUTOS (no motos ni camionetas creo) ingresan en cola de mantenimiento al cargarlos sin importar que sea nuevo
 No arreglado (hacer)                - Que se pueda cambiar el estado de mantenimiento y de lavado en los usados        
 No arreglado (hacer)                - Hacer que pregunte el kilometraje del vehiculo si es usado
 
