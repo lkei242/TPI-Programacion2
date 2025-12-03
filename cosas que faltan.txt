@@ -3,7 +3,6 @@ Puntos que faltan:
 para mi hay que acortar la clase menu haciendo otra clase u otras clases que sean submenu
 
 No arreglado (hacer)                - Que se pueda cambiar el estado de mantenimiento y de lavado en los usados        
-No arreglado (hacer)                - Hacer que pregunte el kilometraje del vehiculo si es usado
 
 Listo (revisar)                 -	Organización de código mediante concepto de “Diseño vs. Negocio” (4 puntos)
 No hecho (hacer)                -	Patrón de diseño JAVABean. (4 puntos)
