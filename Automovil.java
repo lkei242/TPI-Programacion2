@@ -1,12 +1,10 @@
-public class Automovil extends Vehiculo 
+import java.io.Serializable;
+public class Automovil extends Vehiculo implements Serializable
 {
-
-
-
-    //Constructor
-    public Automovil(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado, String idVehiculo, boolean lavado)
+    public Automovil() {}
+    public Automovil(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado, String idVehiculo, boolean lavado, Double precio)
     {
-        super(marca, modelo, anio, color, carroceria, esUsado, kilometraje, mantenimientoRealizado, idVehiculo, lavado);
+        super(marca, modelo, anio, color, carroceria, esUsado, kilometraje, mantenimientoRealizado, idVehiculo, lavado, precio);
     }
 
 
@@ -24,8 +22,27 @@ public class Automovil extends Vehiculo
         System.out.println("Mantenimiento: " + (super.getMantenimiento() ? "Ha sido mantenido" : "Pendiente"));
         System.out.println("Usado: " + (super.getEsUsado() ? "Si" : "No"));
         System.out.println("Lavado: " + (super.getLavado() ? "Si" : "No"));
+        System.out.println("Precio: $" + String.format("%.0f",super.getPrecio()));
 
         System.out.println("-------------------------");
     }
+
+    public String toString() 
+    {
+        return  "=== Automovil ===\n" +
+                "idVehiculo: " + super.getIdVehiculo() + "\n" +
+                "Marca: " + super.getMarca() + "\n" +
+                "Modelo: " + super.getModelo() + "\n" +
+                "Anio: " + super.getAnio() + "\n" +
+                "Color: " + super.getColor() + "\n" +
+                "Carroceria: " + super.getCarroceria() + "\n" +
+                "Kilometraje: " + super.getKilometraje() + "\n" +
+                "Mantenimiento: " + (super.getMantenimiento() ? "Ha sido mantenido" : "Pendiente") + "\n" +
+                "Usado: " + (super.getEsUsado() ? "Si" : "No") + "\n" +
+                "Lavado: " + (super.getLavado() ? "Si" : "No") + "\n" +
+                "Precio: $" + String.format("%.0f", super.getPrecio()) + "\n" +
+                "-------------------------";
+    }
+
 }
 

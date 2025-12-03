@@ -1,4 +1,5 @@
-public class SeleccionColorAuto {
+import java.io.Serializable;
+public class SeleccionColorAuto implements Serializable {
 
     public enum ColorAuto {
         ROJO,

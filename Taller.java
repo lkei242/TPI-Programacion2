@@ -1,6 +1,7 @@
-public class Taller
+import java.io.Serializable;
+public class Taller implements Serializable
 {
-
+    public Taller(){}
     public void realizarMantenimiento(Vehiculo vehiculoUsado) 
     {
         System.out.println("Realizando mantenimiento tecnico...");

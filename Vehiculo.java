@@ -1,4 +1,5 @@
-public abstract class Vehiculo implements Usado
+import java.io.Serializable;
+public abstract class Vehiculo implements Usado, Serializable
 {
     private String idVehiculo;
     private String marca;
@@ -10,9 +11,10 @@ public abstract class Vehiculo implements Usado
     private boolean mantenimientoRealizado;
     private int kilometraje;
     private boolean lavado;
+    private Double precio;
     
 
-     //Accesores
+     
     public String getMarca() {
         return marca;
     }
@@ -75,9 +77,17 @@ public abstract class Vehiculo implements Usado
     {
         this.lavado = lavado;
     }
+    public void setPrecio(Double precio)
+    {
+        this.precio = precio;
+    }
+    public Double getPrecio()
+    {
+        return this.precio;
+    }
 
-     //Constructor
-    public Vehiculo(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado, String idVehiculo, boolean lavado) 
+    public Vehiculo(){}
+    public Vehiculo(String marca, String modelo, int anio, String color, String carroceria, boolean esUsado, int kilometraje, boolean mantenimientoRealizado, String idVehiculo, boolean lavado, Double precio) 
     {
         this.marca = marca;
         this.modelo = modelo;
@@ -89,9 +99,10 @@ public abstract class Vehiculo implements Usado
         this.mantenimientoRealizado = mantenimientoRealizado;
         this.idVehiculo = idVehiculo;
         this.lavado = lavado;
+        this.precio = precio;
     }
 
  
-    //Metodos
-    public abstract void mostrarInfo(); //Cambiarlo a un toString() 
+    
+    public abstract void mostrarInfo();
 }
