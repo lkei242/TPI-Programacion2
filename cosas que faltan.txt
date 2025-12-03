@@ -13,7 +13,7 @@ Listo (revisar o añadir más)    -	Implementación de Interfases (tanto de JAVA
 Listo (revisar o agregar más)   -	Tratamiento de Excepciones (incluyendo Excepciones Propias) (8 puntos)
 Listo (revisar)                 -	Tipos Enumerativos. (3 puntos)
 Listo (revisar)                 -	Énfasis en la UX (interacción con el usuario, menúes con opciones, control de “data-entry”). (3 puntos)
-No hecho (hacer)                -	Aplicación de Wrappers. (5 puntos)
+Listo (revisar)                 -	Aplicación de Wrappers. (5 puntos)
 Listo (revisar y justificar)    -	Organización de los datos utilizando una Colección, elegida según criterios explicados en Clases. (10 puntos)
 Listo (revisar)                  -	Implementación de una “Cola o Lista de espera” (utilizando también una Colección) de vehículos usados, para ordenar su ingreso al “Taller de Revisión Mecánica”. (6 puntos)
 Listo (revisar)                  -	Implementación de al menos, una Clase Genérica. (8 puntos)
